@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الإنجليزي معانا</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fc;color:#172b4d}
+header{background:#102c54;color:white;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:24px;font-weight:bold;color:#f5c45e}
+nav a{color:white;text-decoration:none;margin:8px}
+.hero{text-align:center;padding:75px 15px;background:linear-gradient(135deg,#102c54,#1764a5);color:white}
+.hero h1{font-size:36px}
+.hero p{font-size:18px;line-height:1.8}
+.btn{background:#eebc50;color:#102c54;border:0;padding:13px 25px;border-radius:9px;font-weight:bold;cursor:pointer;margin:5px}
+section{padding:35px 6%;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;padding:25px;border-radius:15px;box-shadow:0 4px 18px #0001}
+.card h3{color:#1764a5}
+.panel{max-width:430px;margin:30px auto;background:white;padding:25px;border-radius:15px;box-shadow:0 4px 20px #0001}
+input,select{width:100%;padding:13px;margin:9px 0;border:1px solid #ccd5e2;border-radius:8px}
+.hidden{display:none}
+footer{background:#102c54;color:white;text-align:center;padding:25px}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">الإنجليزي معانا 🎓</div>
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#courses">الكورسات</a>
+<a href="#about">من نحن</a>
+<a href="#account">حسابي</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<h1>تعلم الإنجليزية واصنع مستقبلك</h1>
+<p>منصتك التعليمية لتعلم اللغة الإنجليزية بطريقة سهلة ومنظمة</p>
+<button class="btn" onclick="showAccount()">انضم إلينا الآن</button>
+</div>
+
+<section id="courses">
+<h2>ماذا نقدم لك؟</h2>
+<div class="cards">
+<div class="card"><h3>📚 دروس تعليمية</h3><p>تعلم الإنجليزية خطوة بخطوة.</p></div>
+<div class="card"><h3>📝 اختبارات</h3><p>اختبر مستواك وتابع تقدمك.</p></div>
+<div class="card"><h3>🎥 فيديوهات</h3><p>شاهد الدروس التعليمية.</p></div>
+<div class="card"><h3>🏆 شهادات</h3><p>احصل على شهادات إتمام الكورسات.</p></div>
+</div>
+</section>
+
+<section id="about">
+<h2>عن المنصة</h2>
+<p>الإنجليزي معانا منصة تهدف إلى جعل تعلم اللغة الإنجليزية متاحًا للجميع.</p>
+</section>
+
+<section id="account">
+<div class="panel">
+<h2>إنشاء حساب جديد</h2>
+<p>اختر نوع الحساب</p>
+<select id="role">
+<option value="student">طالب</option>
+<option value="teacher">مدرس</option>
+</select>
+<input id="name" placeholder="الاسم بالكامل">
+<input id="email" type="email" placeholder="البريد الإلكتروني">
+<input id="password" type="password" placeholder="كلمة المرور">
+<button class="btn" onclick="register()">إرسال طلب الانضمام</button>
+<p id="message"></p>
+<hr>
+<h3>لديك حساب بالفعل؟</h3>
+<input id="loginEmail" type="email" placeholder="البريد الإلكتروني">
+<input id="loginPassword" type="password" placeholder="كلمة المرور">
+<button class="btn" onclick="login()">تسجيل الدخول</button>
+<p id="loginMessage"></p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 الإنجليزي معانا - جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+function showAccount(){
+document.getElementById('account').scrollIntoView({behavior:'smooth'});
+}
+function register(){
+document.getElementById('message').textContent=
+'واجهة التسجيل جاهزة. سيتم تفعيل إرسال الطلبات بعد ربط قاعدة البيانات.';
+}
+function login(){
+document.getElementById('loginMessage').textContent=
+'سيتم تفعيل تسجيل الدخول بعد ربط قاعدة البيانات.';
+}
+</script>
+</body>
+</html>
